@@ -30,7 +30,8 @@ def getphoto(filename, cameranumber):
 
 
 # Формируем имя файла, из текущего каталога, каталога photos (должен существовать), даты и времени
-filename=os.getcwd()+'/photos/'+time.ctime()+'.png'
+filename=os.getcwd()+'/photos/'+time.ctime().replace(':','_')+'.png'
+print(filename)
 # Делаем снимок с первой камеры в списке камер, и сохраняем его
 facescount=getphoto(filename, 0)
 # Печатаем сколько лиц мы нашли на фото с веб камеры
