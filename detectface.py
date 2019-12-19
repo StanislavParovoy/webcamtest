@@ -29,7 +29,7 @@ def getphoto(filename, cameranumber):
     return(faces_detected)
 
 
-# Формируем имя файла, из текущего каталога, каталога photos (должен сущевствовать), даты и времени
+# Формируем имя файла, из текущего каталога, каталога photos (должен существовать), даты и времени
 filename=os.getcwd()+'/photos/'+time.ctime()+'.png'
 # Делаем снимок с первой камеры в списке камер, и сохраняем его
 facescount=getphoto(filename, 0)
